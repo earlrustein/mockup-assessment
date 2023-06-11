@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    column-gap: 30px;
+
+    &__logo {
+        display: flex;
+        color: var(--dark-color);
+        font-size: 22px;
+        text-decoration: none;
+        align-items: center;
+        column-gap: 10px;
+
+        &__icon {
+            width: 40px;
+            height: auto;
+        }
+    }
+
+    &__nav-links {
+        margin-top: 5px;
+        list-style: none;
+    }
+
+    &__nav-links li a {
+        color: var(--dark-color);
+        text-decoration: none;
+    }
+}
