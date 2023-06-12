@@ -1,37 +1,55 @@
+@import '@/assets/styles/variables/_mixins.scss';
+
 .card {
     display: flex;
-    column-gap: 60px;
+    column-gap: 64px;
     justify-content: center;
     color: #fff;
     width: 30%;
-    padding: 40px;
+    padding: 48px;
     border-radius: 15px;
+
+    @include tablet {
+        flex-direction: column;
+        width: 100%;
+        padding: 24px;
+        row-gap: 16px;
+    }
 
     &__icon-part {
         display: flex;
         flex-direction: column;
-        row-gap: 25px;
+        row-gap: 24px;
         align-items: center;
+
+        @include tablet {
+            row-gap: 16px;
+        }
 
         img {
             width: 175px;
             height: auto;
+
+            @include tablet {
+                width: 100px;
+            }
         }
 
         span {
-            padding: 6px 11px;
+            padding: 6px 12px;
             text-transform: uppercase;
             background: rgba(0, 0, 0, .3);
             font-family: 'Roboto-Bold', sans-serif;
             font-size: 14px;
             border-radius: 25px;
+            
         }
     }
 
     &__text-part {
         display: flex;
         flex-direction: column;
-        row-gap: 10px;
+        row-gap: 12px;
     }
 
     &__text-part-subtitle {
@@ -46,8 +64,12 @@
     }
 
     &__text-part-body {
-        line-height: 30px;
-        padding-top: 20px;
-        font-family: 'Roboto-Light', sans-serif;
+        line-height: 32px;
+        padding-top: 24px;
+        font-family: 'Roboto', sans-serif;
+
+        @include tablet {
+            padding-top: 12px;
+        }
     }
 }

@@ -1,12 +1,20 @@
+@import './../../assets/styles/variables/mixins';
+
 .home {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     &__bg-left {
         position: absolute;
         top: 350px;
         left: -85px;
         z-index: -1;
+
+        @include tablet {
+            width: 100%;
+            overflow: hidden;
+        }
     }
 
     &__bg-right {
@@ -14,25 +22,46 @@
         top: -60px;
         right: 0;
         z-index: -1;
+
+        @include tablet {
+            display: none;
+        }
     }
 
     &__header {
         width: 100%;
-        padding: 100px 10% 120px 12%;
+        padding: 128px;
         display: flex;
         flex-direction: column;
-        row-gap: 20px;
+        row-gap: 16px;
+
+        @include tablet {
+            padding: 128px 32px;
+        }
     }
 
     &__header-title {
         font-size: 60px;
         font-weight: 700;
+
+        @include tablet {
+            align-self: center;
+        }
     }
    
     &__header-content {
         font-size: 22px;
         width: 34%;
-        line-height: 35px;
+        line-height: 32px;
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+    &__header-btn-content {
+        @include tablet {
+            align-self: center;
+        }
     }
 
     &__header-btn-content button {
@@ -53,10 +82,14 @@
     }
 
     &__download-links {
-        padding: 25px 0;
+        padding: 24px 0;
         display: flex;
         justify-content: center;
-        column-gap: 50px;
+        column-gap: 32px;
+
+        @include tablet {
+            column-gap: 24px;
+        }
     }
 
     &__hr-line {
@@ -68,11 +101,15 @@
     }
 
     &__header-body {
-        padding-top: 80px;
+        padding-top: 96px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        row-gap: 10px;
+        row-gap: 12px;
+
+        @include tablet {
+            padding: 96px 32px 0;
+        }
     }
 
     &__header-body-title {
@@ -84,68 +121,123 @@
         font-size: 22px;
         width: 40%;
         text-align: center;
-        line-height: 35px;
+        line-height: 32px;
+
+        @include tablet {
+            width: 100%;
+            text-align: left;
+        }
     }
 
     &__section {
-        padding: 200px 0;
+        padding: 192px 0;
         display: flex;
         align-items: center;
         flex-direction: column;
-        row-gap: 150px;
+        row-gap: 128px;
+        
+        @include tablet {
+            padding: 192px 32px;
+        }
     }
 
     &__section-content {
         display: flex;
-        column-gap: 50px;
+        column-gap: 48px;
         width: 40%;
 
         div img {
             width: 350px;
             height: auto;
+
+            @include tablet {
+                width: 200px;
+            }
         }
 
         div:nth-child(odd) {
             display: flex;
             flex-direction: column;
-            row-gap: 15px;
+            row-gap: 16px;
+        }
+
+        @include tablet {
+            flex-direction: column-reverse;
+            width: 100%;
+            row-gap: 16px;
+            text-align: center;
         }
     }
 
     &__section-content:nth-child(odd) {
         text-align: right;
+
+        @include tablet {
+            text-align: center;
+        }
     }
 
     &__section-content:nth-child(even) {
         text-align: left;
         display: flex;
         flex-direction: row-reverse;
+
+        @include tablet {
+            flex-direction: column-reverse;
+            width: 100%;
+            row-gap: 16px;
+            text-align: center;
+        }
     }
 
     &__section-content-title {
         font-family: 'Roboto-Bold', sans-serif;
         font-size: 36px;
+
+        @include tablet {
+            text-align: center;
+        }
+    }
+
+    &__section-content-text {
+        @include tablet {
+            text-align: center;
+        }
     }
 
     &__section-content:nth-child(odd) &__section-content-text {
         font-family: 'Roboto-Light', sans-serif;
         font-size: 18px;
-        line-height: 30px;
+        line-height: 32px;
         width: 90%;
         align-self: end;
+
+        @include tablet {
+            width: 100%;
+        }
     }
 
     &__section-content:nth-child(even) &__section-content-text {
         font-family: 'Roboto-Light', sans-serif;
         font-size: 18px;
-        line-height: 30px;
+        line-height: 32px;
         width: 90%;
+
+        @include tablet {
+            width: 100%;
+        }
     }
 
     &__section-download-bg {
         position: absolute;
         right: 0;
         top: -40px;
+
+        img {
+            @include tablet {
+                width: 125px;
+            }
+        }
     }
 
     &__section-download {
@@ -153,31 +245,45 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 150px 0;
+        padding: 160px 0;
         color: #fff;
-        row-gap: 60px;
+        row-gap: 64px;
         position: relative;
+
+        @include tablet {
+            padding: 160px 32px;
+        }
     }
 
     &__section-download-content {
         display: flex;
         flex-direction: column;
-        row-gap: 15px;
+        row-gap: 16px;
     }
 
     &__section-download-links {
         display: flex;
-        column-gap: 40px;
+        column-gap: 32px;
     }
 
     &__section-download-title {
         font-size: 42px;
         font-weight: 700;
         font-family: 'Roboto-Bold', sans-serif;
+
+        @include tablet {
+            font-size: 36px;
+            text-align: center;
+        }
     }
     
     &__section-download-text {
         font-size: 20px;
+
+        @include tablet {
+            font-size: 16px;
+            text-align: center;
+        }
     }
 
     &__section-actions {
@@ -185,13 +291,17 @@
         flex-direction: column;
         align-items: center;
         padding: 70px 0 295px 0;
-        row-gap: 15px;
+        row-gap: 16px;
         position: relative;
 
         span {
             font-size: 42px;
             font-weight: 700;
             font-family: 'Roboto-Bold', sans-serif;
+
+            @include tablet {
+               text-align: center;
+            }
         }       
 
         .card:nth-child(odd) {
@@ -201,13 +311,22 @@
         .card:nth-child(even) {
             background-color: var(--accent-color);
         }
+
+        @include tablet {
+            padding: 70px 32px 295px;
+        }
     }
 
     &__card-container {
         display: flex;
         justify-content: center;
-        column-gap: 30px;
-        padding-top: 50px;
+        column-gap: 32px;
+        padding-top: 48px;
+
+        @include tablet {
+            flex-direction: column;
+            row-gap: 32px;
+        }
     }
 
     &__section-actions-content {
