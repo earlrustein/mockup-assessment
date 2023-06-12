@@ -4,7 +4,7 @@
 <template>
     <div class="navbar">
         <a href="#" class="navbar__logo"> 
-            <img class="navbar__logo__icon" src="./../../assets/images/logo1.svg" />
+            <img class="navbar__icon" src="./../../assets/images/logo1.svg" />
             <span> Protoapp </span> 
         </a>
         <ul class="navbar__nav-links">

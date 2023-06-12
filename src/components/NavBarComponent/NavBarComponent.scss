@@ -1,21 +1,23 @@
 .navbar {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 20px 10%;
     column-gap: 30px;
+    font-family: 'Roboto', sans-serif;
 
     &__logo {
         display: flex;
         color: var(--dark-color);
         font-size: 22px;
+        
         text-decoration: none;
         align-items: center;
         column-gap: 10px;
+    }
 
-        &__icon {
-            width: 40px;
-            height: auto;
-        }
+    &__icon {
+        width: 40px;
+        height: auto;
     }
 
     &__nav-links {
@@ -26,5 +28,10 @@
     &__nav-links li a {
         color: var(--dark-color);
         text-decoration: none;
+        transition: .4s;
+    }
+
+    &__nav-links li a:hover {
+        color: var(--accent-color);
     }
 }

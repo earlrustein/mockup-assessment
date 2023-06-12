@@ -1,0 +1,53 @@
+.card {
+    display: flex;
+    column-gap: 60px;
+    justify-content: center;
+    color: #fff;
+    width: 30%;
+    padding: 40px;
+    border-radius: 15px;
+
+    &__icon-part {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: center;
+
+        img {
+            width: 175px;
+            height: auto;
+        }
+
+        span {
+            padding: 6px 11px;
+            text-transform: uppercase;
+            background: rgba(0, 0, 0, .3);
+            font-family: 'Roboto-Bold', sans-serif;
+            font-size: 14px;
+            border-radius: 25px;
+        }
+    }
+
+    &__text-part {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    &__text-part-subtitle {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family: 'Roboto-Light', sans-serif;
+    }
+
+    &__text-part-title {
+        font-size: 32px;
+        font-family: 'Roboto-Bold', sans-serif;
+    }
+
+    &__text-part-body {
+        line-height: 30px;
+        padding-top: 20px;
+        font-family: 'Roboto-Light', sans-serif;
+    }
+}
